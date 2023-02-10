@@ -11,16 +11,16 @@ def play_game():
             number_of_guesses += 1
             if user_guess == randomly_generated_number:
                 return f'you guessed correctly, the number is {randomly_generated_number}. you did it in {number_of_guesses} and your score is {score}%'
-            elif abs(user_guess - randomly_generated_number) <= 10:
+            elif user_guess - randomly_generated_number <= 10:
                 print(' You are almost there, Go higher/lower')
                 score -= 2
-            elif abs(user_guess - randomly_generated_number) <= 50:
+            elif user_guess - randomly_generated_number <= 50:
                 print('You are getting close, a bit higher/lower')
                 score -= 3
-            elif abs(user_guess - randomly_generated_number) <= 100:
+            elif user_guess - randomly_generated_number <= 100:
                 print('Still not there, Go higher/lower')
                 score -= 7
-            elif abs(user_guess - randomly_generated_number) <= 200:
+            elif user_guess - randomly_generated_number <= 200:
                 print('INCORRECT! Go much higher/lower')
                 score -= 10
             else:
